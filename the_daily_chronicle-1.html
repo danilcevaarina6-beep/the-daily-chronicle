@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Daily Chronicle | News Archive</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#171817;color:#dedbd2;font-family:Georgia,"Times New Roman",serif}
+.top-line{background:#a52c2c;color:white;text-align:center;padding:8px;font:11px Arial,sans-serif;letter-spacing:3px}
+header{max-width:1100px;margin:auto;padding:32px 25px 20px;text-align:center;border-bottom:1px solid #55534c}
+.logo{font-size:clamp(32px,6vw,55px);letter-spacing:3px;font-weight:bold}
+.subtitle{color:#99958b;font:11px Arial,sans-serif;letter-spacing:4px;margin-top:9px}
+.date{color:#99958b;font:12px Arial,sans-serif;margin-top:22px}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;padding:16px;border-bottom:1px solid #55534c;font:11px Arial,sans-serif;letter-spacing:2px}
+nav a{color:#d1cdc2;text-decoration:none}
+nav a:hover{color:#c94b43}
+.container{max-width:1000px;margin:45px auto;padding:0 24px}
+.section-label{color:#bc5149;font:bold 11px Arial,sans-serif;letter-spacing:3px;margin-bottom:17px}
+.main-article{border-bottom:1px solid #55534c;padding-bottom:35px}
+.headline{font-size:clamp(30px,5vw,48px);line-height:1.15;max-width:750px;margin-bottom:18px}
+.description{color:#aaa69c;font-size:17px;line-height:1.7;max-width:700px}
+.article-info{color:#858178;font:11px Arial,sans-serif;margin:18px 0;letter-spacing:1px}
+.photo-placeholder{margin:25px 0;min-height:230px;background:linear-gradient(135deg,#292a28,#111211);border:1px solid #45443e;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#9b978c}
+.photo-placeholder strong{font-size:29px;letter-spacing:5px;color:#dedbd2}
+.photo-placeholder span{font:10px Arial,sans-serif;letter-spacing:3px;margin-top:12px}
+button{background:transparent;border:1px solid #a52c2c;color:#dedbd2;padding:13px 22px;cursor:pointer;font:11px Arial,sans-serif;letter-spacing:2px;margin-top:10px}
+button:hover{background:#a52c2c}
+.full-article{display:none;margin-top:30px;padding:25px;background:#20211f;border-left:3px solid #a52c2c}
+.full-article p{line-height:1.9;margin-bottom:15px;color:#c5c1b7;font-size:16px}
+.archive{margin-top:45px}
+.archive h2{font-size:27px;margin-bottom:25px}
+.archive-item{border-top:1px solid #494841;padding:20px 0}
+.archive-item small{color:#bc5149;font:10px Arial,sans-serif;letter-spacing:2px}
+.archive-item h3{font-size:20px;margin-top:9px;font-weight:normal}
+.archive-item p{color:#99958b;font-size:14px;margin-top:8px;line-height:1.6}
+footer{border-top:1px solid #55534c;text-align:center;padding:30px 15px;color:#77746c;font:10px Arial,sans-serif;letter-spacing:2px}
+@media(max-width:600px){nav{gap:17px}.container{margin-top:30px}.photo-placeholder{min-height:180px}}
+</style>
+</head>
+<body>
+<div class="top-line">INDEPENDENT NEWS • INVESTIGATIVE JOURNALISM</div>
+<header>
+  <div class="logo">THE DAILY CHRONICLE</div>
+  <div class="subtitle">TRUTH. RECORDS. HISTORY.</div>
+  <div class="date">NEWS ARCHIVE • SPECIAL REPORT</div>
+</header>
+<nav>
+  <a href="#home">HOME</a><a href="#latest">LATEST NEWS</a><a href="#archive">ARCHIVE</a><a href="#about">ABOUT</a>
+</nav>
+<main class="container" id="home">
+  <section class="main-article" id="latest">
+    <div class="section-label">SPECIAL REPORT / MISSING PERSON</div>
+    <h1 class="headline">Young Woman Reported Missing After New Year's Party</h1>
+    <p class="description">Emily Perez has reportedly gone missing following a New Year's gathering. Questions remain as friends and acquaintances try to understand what happened.</p>
+    <div class="article-info">THE DAILY CHRONICLE &nbsp; | &nbsp; SPECIAL NEWS REPORT</div>
+    <div class="photo-placeholder"><strong>EMILY PEREZ</strong><span>MISSING PERSON • CASE ARCHIVE</span></div>
+    <button onclick="toggleArticle()" id="readButton">READ FULL ARTICLE →</button>
+    <div class="full-article" id="fullArticle">
+      <p>Emily Perez was last reported to have been seen around the time of a New Year's party attended by several people.</p>
+      <p>Her disappearance has raised questions among those who knew her. The circumstances surrounding the case remain unclear.</p>
+      <p>This report is part of The Daily Chronicle's ongoing archive of local news stories.</p>
+      <p>Further details may emerge as the investigation continues.</p>
+    </div>
+  </section>
+  <section class="archive" id="archive">
+    <div class="section-label">FROM THE NEWSROOM</div><h2>News Archive</h2>
+    <div class="archive-item"><small>LOCAL NEWS / CASE FILE</small><h3>Questions Surround New Year's Gathering</h3><p>Details about the evening remain unclear. Several questions have yet to be answered.</p></div>
+    <div class="archive-item"><small>COMMUNITY / REPORT</small><h3>Friends Await More Information</h3><p>People close to Emily are still waiting for answers about her disappearance.</p></div>
+    <div class="archive-item"><small>ARCHIVE / INVESTIGATION</small><h3>What We Know So Far</h3><p>A collection of details connected to the missing person report.</p></div>
+  </section>
+  <section class="archive" id="about"><div class="section-label">ABOUT THE PUBLICATION</div><p class="description">The Daily Chronicle is an independent fictional news publication created for a detective game.</p></section>
+</main>
+<footer>THE DAILY CHRONICLE © NEWS ARCHIVE<br><br>FICTIONAL PUBLICATION • CREATED FOR A DETECTIVE GAME</footer>
+<script>
+function toggleArticle(){
+  const article=document.getElementById("fullArticle");
+  const button=document.getElementById("readButton");
+  if(article.style.display==="block"){article.style.display="none";button.innerText="READ FULL ARTICLE →";}
+  else{article.style.display="block";button.innerText="CLOSE ARTICLE ↑";}
+}
+</script>
+</body>
+</html>
